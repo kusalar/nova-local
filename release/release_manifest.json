@@ -1,0 +1,59 @@
+{
+  "application": "NOVA (Neural Operational Virtual Assistant)",
+  "version": "1.0.0",
+  "channel": "stable",
+  "platform": "windows",
+  "architecture": "x64",
+  "target_baseline": {
+    "cpu": "Intel Core i3-1115G4 (2 cores / 4 threads @ 3.00 GHz)",
+    "ram": "12 GB RAM",
+    "gpu": "Intel UHD Graphics (Integrated)",
+    "os": "Windows 11 (64-bit)"
+  },
+  "runtime_strategy": {
+    "type": "managed_local_environment",
+    "description": "Production Python 3.10+ runtime with pre-compiled Vite/React frontend and automated PowerShell installer",
+    "rationale": "Provides zero data loss across upgrades, transparent dependency management, deterministic SQLite database file isolation, and native Windows integration without bloated multi-gigabyte monolithic bundles."
+  },
+  "components": {
+    "backend": {
+      "framework": "FastAPI / Uvicorn",
+      "version": "1.0.0",
+      "entry_point": "backend.app.main:app",
+      "port": 8000
+    },
+    "frontend": {
+      "framework": "React 18 / TypeScript / Vite / TailwindCSS",
+      "version": "1.0.0",
+      "port": 1420
+    },
+    "neural_engine": {
+      "provider": "Ollama (Offline Local)",
+      "default_model": "qwen2.5:3b",
+      "supported_models": ["qwen2.5:3b", "qwen2.5:1.5b", "llama3.2:3b", "llama3.2:1b"],
+      "port": 11434
+    },
+    "voice_pipeline": {
+      "wake_word_engine": "openWakeWord (Offline ONNX)",
+      "active_wake_phrase": "Hey Jarvis (Built-in)",
+      "custom_model_support": "models/wake_words/hey_nova.onnx (Optional)",
+      "speech_to_text": "Vosk (Offline Kaldi C-API)",
+      "text_to_speech": "Piper Neural TTS (Offline ONNX)"
+    },
+    "database": {
+      "engine": "SQLite 3.x",
+      "journal_mode": "WAL",
+      "busy_timeout_ms": 5000,
+      "storage_file": "nova_memory.db",
+      "backup_directory": "backups/"
+    }
+  },
+  "installer": {
+    "setup_script_powershell": "scripts/setup_windows.ps1",
+    "setup_script_batch": "scripts/setup_windows.bat",
+    "production_launcher": "scripts/start_production.bat",
+    "cleanup_script": "scripts/stop_all.bat",
+    "uninstaller": "scripts/uninstall.ps1"
+  },
+  "created_at": "2026-10-21T17:00:00Z"
+}

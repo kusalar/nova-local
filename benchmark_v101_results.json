@@ -1,0 +1,175 @@
+{
+  "generated_at": "2026-10-21T14:38:28.715597+00:00",
+  "model": "qwen2.5:1.5b",
+  "prompt_chars": 48,
+  "hardware_note": "Intel Core i3-1115G4 class target; values are from this run only.",
+  "idle_before": {
+    "system_cpu_percent": 21.4,
+    "system_ram_percent": 67.2,
+    "system_ram_used_gb": 7.9,
+    "ollama_cpu_percent": 0.0,
+    "ollama_rss_mb": 31.3
+  },
+  "A_direct_thread2": {
+    "tag": "direct_thread2",
+    "ok": true,
+    "path": "direct_ollama",
+    "model": "qwen2.5:1.5b",
+    "options": {
+      "num_ctx": 1024,
+      "num_predict": 96,
+      "temperature": 0.2,
+      "num_thread": 2
+    },
+    "keep_alive": "10m",
+    "ttft_ms": 4783.01,
+    "total_ms": 5131.81,
+    "eval_count": 9,
+    "prompt_eval_count": 38,
+    "tokens_per_sec": 24.833,
+    "prompt_eval_ms": 493.12,
+    "eval_ms": 362.42,
+    "ollama_total_ms": 2748.64,
+    "load_ms": 1872.83,
+    "model_was_loaded": false,
+    "ollama_requests": 1,
+    "resources_after": {
+      "system_cpu_percent": 53.8,
+      "system_ram_percent": 74.7,
+      "system_ram_used_gb": 8.78,
+      "ollama_cpu_percent": 0.0,
+      "ollama_rss_mb": 34.0
+    }
+  },
+  "A_direct_auto": {
+    "tag": "direct_auto",
+    "ok": true,
+    "path": "direct_ollama",
+    "model": "qwen2.5:1.5b",
+    "options": {
+      "num_ctx": 1024,
+      "num_predict": 96,
+      "temperature": 0.2
+    },
+    "keep_alive": "10m",
+    "ttft_ms": 4311.59,
+    "total_ms": 4632.03,
+    "eval_count": 9,
+    "prompt_eval_count": 38,
+    "tokens_per_sec": 28.082,
+    "prompt_eval_ms": 349.78,
+    "eval_ms": 320.5,
+    "ollama_total_ms": 2341.19,
+    "load_ms": 1667.32,
+    "model_was_loaded": false,
+    "ollama_requests": 1,
+    "resources_after": {
+      "system_cpu_percent": 40.0,
+      "system_ram_percent": 74.1,
+      "system_ram_used_gb": 8.71,
+      "ollama_cpu_percent": 0.0,
+      "ollama_rss_mb": 33.7
+    }
+  },
+  "B_nova_text": {
+    "path": "nova_text",
+    "ok": true,
+    "model": "qwen2.5:1.5b",
+    "ttft_ms": 6614.06,
+    "total_ms": 7048.31,
+    "response_chars": 14,
+    "ollama_requests": 1,
+    "metrics": {
+      "request_id": "inf_31070c3a46b4",
+      "source": "text",
+      "ttft_ms": 5860.22,
+      "queue_wait_ms": 0.0,
+      "prompt_eval_count": 397,
+      "eval_count": 9,
+      "tokens_per_sec": 22.617,
+      "prompt_eval_ms": 3485.82,
+      "eval_ms": 397.93,
+      "ollama_total_ms": 5766.31,
+      "load_ms": 1874.58,
+      "model_was_loaded": false,
+      "total_ms": 6257.69,
+      "ollama_calls": 1,
+      "profile": "text",
+      "model": "qwen2.5:1.5b",
+      "prompt_chars": 1822,
+      "options": {
+        "temperature": 0.7,
+        "num_ctx": 1024,
+        "num_predict": 256,
+        "num_thread": 2
+      }
+    },
+    "resources_after": {
+      "system_cpu_percent": 11.0,
+      "system_ram_percent": 74.6,
+      "system_ram_used_gb": 8.76,
+      "ollama_cpu_percent": 0.0,
+      "ollama_rss_mb": 33.5
+    }
+  },
+  "C_nova_voice_ptt": {
+    "path": "nova_voice_ptt",
+    "ok": true,
+    "total_ms": 1665.85,
+    "trace": {
+      "request_id": "inf_95b2d74ffbcc",
+      "source": "voice",
+      "stt_ms": 0.0,
+      "trigger": "manual",
+      "prompt_construct_ms": 2.24,
+      "ttft_ms": 1211.69,
+      "time_to_first_audio_ms": null,
+      "ollama_calls": 1,
+      "queue_wait_ms": 0.0,
+      "prompt_eval_count": 131,
+      "eval_count": 9,
+      "tokens_per_sec": 24.073,
+      "prompt_eval_ms": 639.74,
+      "eval_ms": 373.87,
+      "ollama_total_ms": 1029.79,
+      "load_ms": 7.33,
+      "model_was_loaded": true,
+      "total_ms": 1665.77,
+      "profile": "voice",
+      "model": "qwen2.5:1.5b",
+      "prompt_chars": 568,
+      "options": {
+        "temperature": 0.7,
+        "num_ctx": 1024,
+        "num_predict": 96,
+        "num_thread": 2
+      }
+    },
+    "resources_after": {
+      "system_cpu_percent": 17.0,
+      "system_ram_percent": 78.5,
+      "system_ram_used_gb": 9.22,
+      "ollama_cpu_percent": 0.0,
+      "ollama_rss_mb": 33.5
+    }
+  },
+  "D_idle_modes": {
+    "push_to_talk_idle": {
+      "system_cpu_percent": 1.9,
+      "system_ram_percent": 78.4,
+      "system_ram_used_gb": 9.21,
+      "ollama_cpu_percent": 0.0,
+      "ollama_rss_mb": 33.5,
+      "mic_open": false
+    },
+    "wake_word_idle": {
+      "system_cpu_percent": 5.0,
+      "system_ram_percent": 78.8,
+      "system_ram_used_gb": 9.25,
+      "ollama_cpu_percent": 0.0,
+      "ollama_rss_mb": 33.5,
+      "mic_open": true,
+      "start_ok": true
+    }
+  }
+}

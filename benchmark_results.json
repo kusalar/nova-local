@@ -1,0 +1,47 @@
+{
+  "system_baseline": {
+    "platform": "win32",
+    "cpu_count": 4,
+    "total_ram_gb": 11.75,
+    "system_cpu_idle_percent": 19.1,
+    "system_ram_used_percent": 86.7,
+    "python_process_rss_mb": 282.91
+  },
+  "database_performance": {
+    "status_query_latency_ms": 5.26,
+    "online_backup_latency_ms": 92.04,
+    "backup_validation_latency_ms": 1.87,
+    "backup_size_bytes": 471040,
+    "tables_count": 23,
+    "records_count": 559
+  },
+  "memory_performance": {
+    "fastembed_onnx_embedding_latency_ms": 9.13,
+    "messages_query_latency_ms": 1.57,
+    "project_context_resolution_latency_ms": 0.61,
+    "embedding_dimensions": 384
+  },
+  "agent_planning_performance": {
+    "dag_decomposition_latency_ms": 0.86,
+    "steps_generated": 3,
+    "requires_approval": false
+  },
+  "voice_performance": {
+    "tts_sample_text_length": 56,
+    "tts_synthesis_latency_ms": 237.32,
+    "tts_audio_samples_generated": 60928
+  },
+  "reliability_subsystem_health": {
+    "full_health_evaluation_latency_ms": 8313.24,
+    "subsystems_evaluated": 10,
+    "overall_status": "ERROR"
+  },
+  "stress_stability_metrics": {
+    "transactions_executed": 50,
+    "total_duration_ms": 840.55,
+    "avg_transaction_latency_ms": 16.81,
+    "rss_before_mb": 650.28,
+    "rss_after_mb": 650.43,
+    "ram_growth_mb": 0.14
+  }
+}
