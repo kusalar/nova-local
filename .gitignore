@@ -69,3 +69,7 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# Root markdown reports and guides (kept locally, excluded from git)
+/*.md
+!/README.md
